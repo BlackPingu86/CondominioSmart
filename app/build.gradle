@@ -16,7 +16,7 @@ android {
     }
     buildTypes {
         release {
-            minifyEnabled true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
         debug {
@@ -51,17 +51,12 @@ dependencies {
     // Glide per caricamento immagini
     implementation 'com.github.bumptech.glide:glide:4.15.1'
     
-    // Sicurezza e crittografia
+    // Sicurezza base (versioni stabili)
     implementation 'androidx.security:security-crypto:1.1.0-alpha06'
     implementation 'androidx.biometric:biometric:1.1.0'
-    implementation 'com.google.crypto.tink:tink-android:1.7.0'
-    
-    // JWT per autenticazione sicura
-    implementation 'com.auth0.android:jwtdecode:2.0.1'
     
     // Network security
     implementation 'com.squareup.okhttp3:okhttp:4.10.0'
-    implementation 'com.squareup.okhttp3:logging-interceptor:4.10.0'
     
     // Lifecycle e ViewModel
     implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
