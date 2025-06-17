@@ -1,0 +1,31 @@
+package com.condominiosmart.app
+
+import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        val emailEditText = findViewById<EditText>(R.id.editTextEmail)
+        val passwordEditText = findViewById<EditText>(R.id.editTextPassword)
+        val loginButton = findViewById<Button>(R.id.buttonLogin)
+
+        loginButton.setOnClickListener {
+            val email = emailEditText.text.toString()
+            val password = passwordEditText.text.toString()
+
+            // Login fittizio: accetta qualsiasi email e password non vuoti
+            if (email.isNotEmpty() && password.isNotEmpty()) {
+                Toast.makeText(this, "Login effettuato!", Toast.LENGTH_SHORT).show()
+                // Qui potrai aggiungere la logica per andare alla Home
+            } else {
+                Toast.makeText(this, "Inserisci email e password", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+}

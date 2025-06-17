@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/colorBackground"
+    android:padding="24dp">
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/colorGray"
+        android:textColor="@color/colorDarkBlue"
+        android:textColorHint="@color/colorGray"/>
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/colorGray"
+        android:textColor="@color/colorDarkBlue"
+        android:textColorHint="@color/colorGray"/>
+
+    <EditText
+        android:id="@+id/editTextConfirmPassword"
+        android:hint="Conferma Password"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/colorGray"
+        android:textColor="@color/colorDarkBlue"
+        android:textColorHint="@color/colorGray"/>
+
+    <Button
+        android:id="@+id/buttonRegister"
+        style="@style/Widget.Button.Rounded"
+        android:text="Registrati"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout> 

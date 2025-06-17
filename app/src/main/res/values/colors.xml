@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorGray">#969BA1</color>
+    <color name="colorOrange">#F97C2F</color>
+    <color name="colorDarkBlue">#1B222B</color>
+
+    <!-- Material Theme Colors -->
+    <color name="colorPrimary">#F97C2F</color>
+    <color name="colorPrimaryDark">#1B222B</color>
+    <color name="colorAccent">#F97C2F</color>
+    <color name="colorSecondary">#969BA1</color>
+    <color name="colorBackground">#FFFFFF</color>
+    <color name="green_paid">#4CAF50</color>
+    <color name="red_unpaid">#F44336</color>
+
+    <!-- Dark Theme Colors -->
+    <color name="colorDarkBackground">#121212</color>
+    <color name="colorDarkSurface">#1E1E1E</color>
+    <color name="colorLightGray">#B3B3B3</color>
+</resources> 

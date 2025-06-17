@@ -1,0 +1,27 @@
+tasks:
+  - name: Setup Android Build Environment
+    init: |
+      echo "🚀 Setting up Android build environment..."
+      chmod +x gradlew
+      echo "✅ Gradle wrapper permissions set"
+    
+  - name: Build APK
+    command: |
+      echo "🔨 Building APK..."
+      ./gradlew clean
+      ./gradlew assembleDebug
+      echo "✅ APK built successfully!"
+      echo "📱 APK location: app/build/outputs/apk/debug/app-debug.apk"
+      echo "💡 Right-click the APK file to download it"
+
+ports:
+  - port: 8080
+    onOpen: ignore
+
+vscode:
+  extensions:
+    - ms-vscode.vscode-java-pack
+    - redhat.java
+    - vscjava.vscode-gradle
+    - ms-vscode.vscode-json
+    - ms-vscode.vscode-xml 

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.CondominioSmart" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/colorWhite</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorSecondaryVariant">@color/colorGray</item>
+        <item name="colorOnSecondary">@color/colorWhite</item>
+        <item name="android:colorBackground">@color/colorBackground</item>
+        <item name="colorSurface">@color/colorWhite</item>
+        <item name="colorOnSurface">@color/colorDarkBlue</item>
+        <item name="android:textColorPrimary">@color/colorDarkBlue</item>
+        <item name="android:textColorSecondary">@color/colorGray</item>
+        <item name="android:windowBackground">@color/colorBackground</item>
+    </style>
+
+    <style name="Widget.FAB.CondominioSmart" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="backgroundTint">@color/colorPrimary</item>
+        <item name="rippleColor">@color/colorGray</item>
+    </style>
+
+    <style name="Widget.Toolbar.CondominioSmart" parent="Widget.MaterialComponents.Toolbar">
+        <item name="android:background">@color/colorDarkBlue</item>
+        <item name="titleTextColor">@color/colorWhite</item>
+        <item name="subtitleTextColor">@color/colorGray</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+</resources> 

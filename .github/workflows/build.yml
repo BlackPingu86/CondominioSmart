@@ -1,0 +1,75 @@
+name: Build Android APK
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Set up JDK 11
+      uses: actions/setup-java@v4
+      with:
+        java-version: '11'
+        distribution: 'temurin'
+        cache: gradle
+    
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+    
+    - name: Build with Gradle
+      run: ./gradlew assembleDebug
+    
+    - name: Upload APK
+      uses: actions/upload-artifact@v4
+      with:
+        name: CondominioSmart-APK
+        path: app/build/outputs/apk/debug/app-debug.apk
+        retention-days: 30
+    
+    - name: Create Release
+      if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+      uses: softprops/action-gh-release@v1
+      with:
+        files: app/build/outputs/apk/debug/app-debug.apk
+        tag_name: v${{ github.run_number }}
+        name: Release v${{ github.run_number }}
+        body: |
+          ## 🚀 CondominioSmart APK
+          
+          ### 📱 Funzionalità
+          - ✅ Login e registrazione
+          - ✅ Gestione pagamenti con filtri
+          - ✅ Gestione documenti
+          - ✅ Gestione avvisi
+          - ✅ Animazioni zoom fluide
+          - ✅ Tema scuro/chiaro
+          
+          ### 🎨 Miglioramenti UI/UX
+          - Animazioni di entrata e transizione
+          - Feedback visivo migliorato
+          - Design system coerente
+          - Esperienza utente moderna
+          
+          ### 📥 Installazione
+          1. Scarica l'APK
+          2. Abilita "Fonti sconosciute" nelle impostazioni
+          3. Installa l'APK
+          4. Testa tutte le funzionalità!
+          
+          ### 🧪 Test
+          - Login: inserisci email e password
+          - Navigazione: testa le animazioni zoom
+          - Tema: Menu → Cambia Tema
+          - Pagamenti: testa filtri e anteprime
+          
+          **Build #${{ github.run_number }}**
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 

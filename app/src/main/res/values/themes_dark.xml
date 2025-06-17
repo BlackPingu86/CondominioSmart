@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.CondominioSmart.Dark" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/colorWhite</item>
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorSecondaryVariant">@color/colorGray</item>
+        <item name="colorOnSecondary">@color/colorWhite</item>
+        <item name="android:colorBackground">@color/colorDarkBackground</item>
+        <item name="colorSurface">@color/colorDarkSurface</item>
+        <item name="colorOnSurface">@color/colorWhite</item>
+        <item name="android:textColorPrimary">@color/colorWhite</item>
+        <item name="android:textColorSecondary">@color/colorLightGray</item>
+        <item name="android:windowBackground">@color/colorDarkBackground</item>
+        <item name="android:statusBarColor">@color/colorDarkBackground</item>
+        <item name="android:navigationBarColor">@color/colorDarkBackground</item>
+    </style>
+</resources> 
