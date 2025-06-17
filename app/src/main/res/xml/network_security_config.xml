@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Configurazione per dominio principale -->
+    <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">api.condominiosmart.com</domain>
+        <domain includeSubdomains="true">firebase.google.com</domain>
+        <domain includeSubdomains="true">googleapis.com</domain>
+        
+        <!-- Certificate pinning per sicurezza extra -->
+        <pin-set expiration="2024-12-31">
+            <!-- Firebase certificate -->
+            <pin digest="SHA-256">k2v657xBsOVE1KoqlDZG8j9lRW8F/Epb+jZSPKcZYjA=</pin>
+            <!-- Google APIs certificate -->
+            <pin digest="SHA-256">WoiWRyIOVNa9ihaBciRSC7XHjliYS9VwUGOIud4PB18=</pin>
+        </pin-set>
+        
+        <!-- Configurazione TLS -->
+        <trust-anchors>
+            <certificates src="system"/>
+        </trust-anchors>
+    </domain-config>
+    
+    <!-- Configurazione per localhost (solo sviluppo) -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">localhost</domain>
+        <domain includeSubdomains="true">10.0.2.2</domain>
+    </domain-config>
+    
+    <!-- Configurazione globale -->
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system"/>
+        </trust-anchors>
+    </base-config>
+    
+    <!-- Debug configuration (solo per sviluppo) -->
+    <debug-overrides>
+        <trust-anchors>
+            <certificates src="system"/>
+            <certificates src="user"/>
+        </trust-anchors>
+    </debug-overrides>
+</network-security-config> 

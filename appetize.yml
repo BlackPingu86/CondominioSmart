@@ -1,0 +1,67 @@
+# Appetize.io Configuration
+# File di configurazione per build automatico
+
+app:
+  name: "CondominioSmart"
+  platform: "android"
+  description: "App Android per gestione condominiale con animazioni moderne"
+
+build:
+  command: "./gradlew assembleDebug"
+  apk_path: "app/build/outputs/apk/debug/app-debug.apk"
+  branch: "master"
+  auto_build: true
+
+emulator:
+  device: "pixel_4"
+  os_version: "30"
+  orientation: "portrait"
+  language: "it"
+  timezone: "Europe/Rome"
+
+features:
+  - "login"
+  - "pagamenti"
+  - "documenti"
+  - "avvisi"
+  - "animazioni_zoom"
+  - "tema_scuro"
+
+test_scenarios:
+  - name: "Login Test"
+    steps:
+      - "Inserisci email"
+      - "Inserisci password"
+      - "Clicca Accedi"
+      - "Verifica animazione zoom in"
+  
+  - name: "Navigation Test"
+    steps:
+      - "Tocca card Pagamenti"
+      - "Verifica animazione zoom out/in"
+      - "Torna indietro"
+      - "Verifica animazione zoom out"
+  
+  - name: "Theme Test"
+    steps:
+      - "Apri menu"
+      - "Clicca Cambia Tema"
+      - "Verifica switch chiaro/scuro"
+  
+  - name: "Pagamenti Test"
+    steps:
+      - "Vai in Pagamenti"
+      - "Testa filtri di ricerca"
+      - "Verifica anteprime file"
+      - "Crea nuovo pagamento"
+
+debug:
+  logs: true
+  screenshots: true
+  video: true
+  performance: true
+
+sharing:
+  public_link: true
+  password_protected: false
+  expiration: "30d" 

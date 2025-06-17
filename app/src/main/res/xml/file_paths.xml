@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Directory per file temporanei sicuri -->
+    <cache-path name="secure_cache" path="." />
+    
+    <!-- Directory per file di documenti sicuri -->
+    <files-path name="secure_files" path="documents/" />
+    
+    <!-- Directory per immagini sicure -->
+    <files-path name="secure_images" path="images/" />
+    
+    <!-- Directory per PDF sicuri -->
+    <files-path name="secure_pdfs" path="pdfs/" />
+    
+    <!-- Directory per backup sicuri -->
+    <files-path name="secure_backup" path="backup/" />
+</paths> 
